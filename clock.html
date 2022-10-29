@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clock</title>
+        <link rel="icon" type="image/css" sizes="32x32" href="logo.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@700&family=Orbitron&display=swap" rel="stylesheet">
+        <meta name="author" content="Owen Wang">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="" id="timemeta">
+        <script type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body id="backcolor">
+        <center>
+            <div id="org">
+                <span class="display" id="main"></span>
+                <br>
+                <div class="setting-open" data-toggle="collapse" data-target="#setting-collapse"> <label for="#setting-img" id="labelimg">Settings</label><i class="fa fa-sort-desc"></i></div>
+                <br>
+                <br>
+                <br>
+                    <div id="setting-collapse" class="collapse">
+                        <div class="settings-full" class="img-responsive img-thumbnail">
+                            <div id="org-full">
+                                <div>
+                                    <input id="backgroundcolor" type="color" value="#333333" onchange="changed()">
+                                    <label for="#backgroundcolor" id="label-one">Background Color</label>
+                                </div>
+                                <div>
+                                    <input id="textcolor" type="color" value="#00b8d9" onchange="changed()">
+                                    <label for="#textcolor" id="label-two">Text Color</label>
+                                </div>
+                                <div>
+                                    <input id="fontsize" type="number" value="125" onchange="changed()">
+                                    <label for="#fontsize" id="label-five">Text Size</label>
+                                </div>
+                                <div>
+                                    <input id="ampm" type="checkbox" checked>
+                                    <label for="#ampm" id="label-three">24 Hour Clock</label>
+                                </div>
+                                <div>
+                                    <input id="milli" type="checkbox" checked>
+                                    <label for="#milli" id="label-four">Milliseconds</label>
+                                </div>
+                                <div>
+                                    <button id="reset" onclick="reset()">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <button id="fullscreen-control" onclick="toggle()">Fullscreen</button>
+                <style>
+                    body{
+                        background-color: rgb(51, 51, 51);
+                        text-align: center;
+                        font-family: Azeret Mono;
+                        overflow: hidden;
+                    }
+
+                    html{
+                        cursor: crosshair;
+                    }
+
+                    #main{
+                        font-size: 125px;
+                        color: rgb(0, 184, 184);
+                    }
+
+                    label{
+                        color: rgb(151, 151, 151);
+                        cursor: crosshair;
+                    }
+
+                    button{
+                        color:rgb(32, 32, 32);
+                        background-color: rgb(56, 197, 43);
+                        width:100px;
+                        height:30px;
+                        border-radius: 15px;
+                        border-style: hidden;
+                        cursor: crosshair;
+                    }
+                    #labelimg{
+                        font-size: 40px;
+                    }
+
+                    input{
+                        width: 200px;
+                        height: 50px;
+                        cursor: crosshair;
+                    }
+
+                    #org-full{
+                        background-color: rgb(189, 189, 189);
+                        border-style:solid;
+                        border-width: 30px;
+                        width:500px;
+                        border-radius:15px;
+                        border-top: rgb(109, 109, 109);
+                        border-left: rgb(189, 189, 189);
+                        border-right: rgb(189, 189, 189);
+                        border-bottom: rgb(189, 189, 189);
+                        padding-top: 30px;
+                        padding-bottom: 30px;
+                    }
+                </style>
+            </div>
+        </center>
+    </body>
+    <script src="clock.js"></script>
+</html>
