@@ -71,9 +71,7 @@ function reset(){
     changed()
 }
 
-//the code to run
 window.setInterval(updateTime, 1);
-// :) !!!
 
 var element = document.documentElement;
 
