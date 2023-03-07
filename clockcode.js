@@ -71,7 +71,7 @@ function reset(){
     changed()
 }
 
-window.setInterval(updateTime, 1);
+//window.setInterval(updateTime, 1);
 
 var element = document.documentElement;
 
