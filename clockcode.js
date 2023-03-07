@@ -4,7 +4,6 @@ var hour = 00;
 var mins = 00;
 var secs = 00;
 var mils = 000;
-var fonts = ['monospace', 'Arial'];
 
 Number.prototype.addZeros = function(n){
     for (var i = this.toString(); i.length < n; i = "0" + i);
@@ -46,7 +45,7 @@ function displayTime(){
             time = time + " AM";
         }
     }
-    document.getElementById("main").innerHTML = time;
+    document.getElementsByClass("main").innerHTML = time;
 }
 
 function updateTime(){
@@ -56,8 +55,8 @@ function updateTime(){
 }
 
 function changed(){
-    document.getElementById("main").style.color = document.getElementById("textcolor").value;
-    document.getElementById("main").style.fontSize = document.getElementById("fontsize").value + "px";
+    document.getElementsByClass("main").style.color = document.getElementById("textcolor").value;
+    document.getElementsByClass("main").style.fontSize = document.getElementById("fontsize").value + "px";
     document.getElementById("backcolor").style.backgroundColor = document.getElementById("backgroundcolor").value;
     document.getElementById("label-six").innerText = "Font Family: Azeret Mono";
 }
@@ -72,7 +71,10 @@ function reset(){
     changed()
 }
 
-window.setInterval(updateTime, 1)
+//the code to run
+window.setInterval(updateTime, 1);
+// :) !!!
+
 var element = document.documentElement;
 
 function openFull(){
